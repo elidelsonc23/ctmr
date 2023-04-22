@@ -1,2 +1,2 @@
 # ctmr
-cálculo de tributos Mega Reino
+Cálculo de tributos Mega Reino
