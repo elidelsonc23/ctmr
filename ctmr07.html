@@ -146,7 +146,6 @@
    }
    else{
       document.getElementById("novaoferta").value = "";
-
       novaoferta=0;
       //return;
    }
@@ -155,11 +154,19 @@
       document.getElementById("remuneracao").value = "";
       document.getElementById("novaoferta").value = "";
       document.getElementById("totaloferta").value = "";
+
+      document.getElementById("primicias").value = "";
+      document.getElementById("dizimo").value = "";
+      document.getElementById("ofminsoc").value = "";
+      document.getElementById("ofgrat").value = "";
+      document.getElementById("ofsem").value = "";
+      document.getElementById("ofisr").value = "";
+      document.getElementById("ofmis").value = "";
       return;
    }
 
    var primicias = parseFloat((remuneracao/30).toFixed(2));
-		 	var dizimo = parseFloat(((remuneracao - primicias) * 0.1).toFixed(2));
+   var dizimo = parseFloat(((remuneracao - primicias) * 0.1).toFixed(2));
    if(dizimo <= 0){ dizimo = primicias; }
    var ofminsoc = parseFloat((remuneracao * 0.02).toFixed(2));
    var ofgrat = parseFloat((remuneracao * 0.001).toFixed(2));
