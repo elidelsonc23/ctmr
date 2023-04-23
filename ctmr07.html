@@ -146,11 +146,14 @@
    }
    else{
       document.getElementById("novaoferta").value = "";
+
       novaoferta=0;
       //return;
    }
    
    if((remuneracao == 0) && (novaoferta == 0)){
+      document.getElementById("remuneracao").value = "";
+      document.getElementById("novaoferta").value = "";
       return;
    }
 
