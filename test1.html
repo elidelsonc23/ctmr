@@ -23,26 +23,11 @@
          })
          .then((text) => {
             poemDisplay.textContent = text;
+            document.getElementById("demo").innerHTML = text;
          })
          .catch((error) => {
-            poemDisplay.textContent = `Could not fetch verse: ${error}`;
+            //poemDisplay.textContent = `Could not fetch verse: ${error}`;
         });   
     </script>
 </body>
 </html>
-
-
-// Call `fetch()`, passing in the URL.
-fetch(url)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    return response.text();
-  })
-  .then((text) => {
-    poemDisplay.textContent = text;
-  })
-  .catch((error) => {
-    poemDisplay.textContent = `Could not fetch verse: ${error}`;
-  });
