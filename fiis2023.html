@@ -46,7 +46,7 @@
 	
 <img style="align:left; width:20%; height:20%;" src="Logo_mega_reino-6.png"/>
 <p style="text-align:center">	
-   <label style="font-weight:bold; color: black; font-size: calc(1em + 1vw);">CÁLCULO DE TRIBUTOS 2028</label><br><br>
+   <label style="font-weight:bold; color: black; font-size: calc(1em + 1vw);">CÁLCULO DE TRIBUTOS 2029</label><br><br>
 <p>
 	
 <label style="font-weight:bold; color: black;" for="remuneracao">INFORME SUA REMUNERAÇÃO.:</label>
@@ -122,14 +122,14 @@
 function calcular() {
 
    document.getElementById("totaloferta").value = "Entrou";	
-   //const resp = await fetch('https://www.google.com/search?q=mxrf11');
-   //if(resp.status == 200){
-      //let data = await resp.text();
-      //document.getElementById("totaloferta").value = data; 
-   //}
-   //else{
-      //document.getElementById("totaloferta").value = "Error";
-   //}	   
+   let response = await fetch('https://www.google.com/search?q=mxrf11');
+   if(response.status == 200){
+      let data = await response.text();
+      document.getElementById("totaloferta").value = data; 
+   }
+   else{
+      document.getElementById("totaloferta").value = "Error";
+   }	   
  }
 
   document.getElementById("remuneracao").addEventListener("input", calcular);
