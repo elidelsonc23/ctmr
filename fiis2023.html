@@ -120,15 +120,16 @@
 
 <script>
 function calcular() {
-   
-   const resp = await fetch('https://www.google.com/search?q=mxrf11');
-   if(resp.status == 200){
-      let data = await resp.text();
-      document.getElementById("totaloferta").value = data; 
-   }
-   else{
-      document.getElementById("totaloferta").value = "Error";
-   }	   
+
+   document.getElementById("totaloferta").value = "Entrou";	
+   //const resp = await fetch('https://www.google.com/search?q=mxrf11');
+   //if(resp.status == 200){
+      //let data = await resp.text();
+      //document.getElementById("totaloferta").value = data; 
+   //}
+   //else{
+      //document.getElementById("totaloferta").value = "Error";
+   //}	   
  }
 
   document.getElementById("remuneracao").addEventListener("input", calcular);
