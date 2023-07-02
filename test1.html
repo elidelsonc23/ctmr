@@ -1,38 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <p style="text-align:center">	
-       <label style="font-weight:bold; color: black; font-size: calc(1em + 1vw);">FUNDOS IMOBILIÁRIOS 2023</label><br><br>
-    <p>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch API Demo</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<html>
 <body>
-    <div class="container"></div>
-    <p id="demo">test 3</p>
-    <script src="js/app.js">
-        // Call `fetch()`, passing in the URL.
-        fetch('https:www.google.com/search?q=mxrf11', { method: 'GET' })
-         .then((response) => {
-           if (!response.ok) {
-              document.getElementById("demo").value = "error";
-              //throw new Error(`HTTP error: ${response.status}`);
-              return;
-           }
-           else{
-              return response.text();
-           }
-         })
-         .then((text) => {
-            //poemDisplay.textContent = text;
-            //document.getElementById("demo").innerHTML = text;
-            document.getElementById("demo").value = text;
-         })
-         .catch((error) => {
-            //poemDisplay.textContent = `Could not fetch verse: ${error}`;
-        });   
-    </script>
+<p id="demo">Fetch a file to change this text.</p>
+
+<script>
+getText("fetch_info.txt");
+
+async functifunctionon getText(file) {
+  let myObject = await fetch(file);
+  let myText = await myObject.text();
+  document.getElementById("demo").innerHTML = myText;
+}
+</script>
+
 </body>
 </html>
