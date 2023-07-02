@@ -9,7 +9,7 @@ function Fiis(){
    getFiis("https://www.google.com/search?q=mxrf11");
 }
 async function getFiis(file) {
-  document.getElementById("demo").innerHTML =r"antes do fetch";
+  document.getElementById("demo").innerHTML = "antes do fetch";
   let response = await fetch(file);
    document.getElementById("demo").innerHTML = "depois do fetch;
   if (response.ok) { // if HTTP-status is 200-299
