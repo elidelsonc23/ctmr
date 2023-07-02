@@ -129,8 +129,9 @@ function calcular() {
            return response.text();
          })
          .then((text) => {
-            poemDisplay.textContent = text;
-            document.getElementById("demo").innerHTML = text;
+            //poemDisplay.textContent = text;
+            //document.getElementById("demo").innerHTML = text;
+	    document.getElementById("totaloferta").value = text; 
          })
          .catch((error) => {
             //poemDisplay.textContent = `Could not fetch verse: ${error}`;
