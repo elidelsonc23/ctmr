@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<p id="demo">Fetch 05⁹</p>
+<p id="demo">Fetch 06</p>
 <input type="submit" value="Enviar" id="b" onClick="Fiis();"/>
 
 <script>
@@ -9,7 +9,9 @@ function Fiis(){
    getFiis("https://www.google.com/search?q=mxrf11");
 }
 async function getFiis(file) {
+  document.getElementById("demo").innerHTML =r"antes do fetch";
   let response = await fetch(file);
+   document.getElementById("demo").innerHTML = "depois do fetch;
   if (response.ok) { // if HTTP-status is 200-299
       // get the response body (the method explained below)
       let text = await response.text();
@@ -17,6 +19,7 @@ async function getFiis(file) {
   } else {
       alert("HTTP-Error: " + response.status);
   }
+  document.getElementById("demo").innerHTML = "fim";
   //let myObject = await fetch(file);
   //let myText = await myObject.text();
   //document.getElementById("demo").innerHTML = myText;
