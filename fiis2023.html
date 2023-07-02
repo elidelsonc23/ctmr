@@ -123,13 +123,13 @@ function calcular() {
 
    document.getElementById("totaloferta").value = "Entrou";	
    let response = await fetch('https://www.google.com/search?q=mxrf11');
-   if(response.status == 200){
+   //if(response.status == 200){
       let data = await response.text();
       document.getElementById("totaloferta").value = data; 
-   }
-   else{
-      document.getElementById("totaloferta").value = "Error";
-   }	   
+   //}
+   //else{
+   //   document.getElementById("totaloferta").value = "Error";
+   //}	   
  }
 
   document.getElementById("remuneracao").addEventListener("input", calcular);
