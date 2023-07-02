@@ -2,14 +2,16 @@
 <html>
 <body>
 <p id="demo">Fetch 02</p>
+<input type="submit" value="Enviar" id="b" onClick="Fiis();"/>
 
 <script>
-getText("https://www.google.com/search?q=mxrf11");
-
-async functifunctionon getText(file) {
-  let myObject = await fetch(file);
-  let myText = await myObject.text();
-  document.getElementById("demo").innerHTML = myText;
+function Fiis(){
+   getFiis("https://www.google.com/search?q=mxrf11");
+}
+async function getFiis(file) {
+  //let myObject = await fetch(file);
+  //let myText = await myObject.text();
+  document.getElementById("demo").innerHTML = file;
 }
 </script>
 
