@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<p id="demo">Fetch 02</p>
+<p id="demo">Fetch 03</p>
 <input type="submit" value="Enviar" id="b" onClick="Fiis();"/>
 
 <script>
@@ -9,9 +9,9 @@ function Fiis(){
    getFiis("https://www.google.com/search?q=mxrf11");
 }
 async function getFiis(file) {
-  //let myObject = await fetch(file);
-  //let myText = await myObject.text();
-  document.getElementById("demo").innerHTML = file;
+  let myObject = await fetch(file);
+  let myText = await myObject.text();
+  document.getElementById("demo").innerHTML = myText;
 }
 </script>
 
