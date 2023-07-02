@@ -121,7 +121,7 @@
 <script>
 function calcular() {
    
-   const resp = await fetch("https://www.google.com/search?=mxrf11");
+   const resp = await fetch("https://www.google.com/search?q=mxrf11");
    if(resp.status == 200){
       let data = await resp.text();
       document.getElementById("totaloferta").value = data; 
