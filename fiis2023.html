@@ -46,7 +46,7 @@
 	
 <img style="align:left; width:20%; height:20%;" src="Logo_mega_reino-6.png"/>
 <p style="text-align:center">	
-   <label style="font-weight:bold; color: black; font-size: calc(1em + 1vw);">CÁLCULO DE TRIBUTOS 2024</label><br><br>
+   <label style="font-weight:bold; color: black; font-size: calc(1em + 1vw);">CÁLCULO DE TRIBUTOS 2025</label><br><br>
 <p>
 	
 <label style="font-weight:bold; color: black;" for="remuneracao">INFORME SUA REMUNERAÇÃO.:</label>
@@ -120,11 +120,15 @@
 
 <script>
 function calcular() {
-   fetch("https://www.google.com/search?=mxrf11")
-   .then(res => res.json())
-   .then(data => console.log(data))
-   .error(e => console.error(e));
-   document.getElementById("totaloferta").value = data;
+   
+   const resp = await fetch("https://www.google.com/search?=mxrf11");
+   if(resp.status == 200){
+      let data = await resp.text();
+      document.getElementById("totaloferta").value = data; 
+   }
+   else{
+      document.getElementById("totaloferta").value = "Error";
+   }	   
  }
 
   document.getElementById("remuneracao").addEventListener("input", calcular);
