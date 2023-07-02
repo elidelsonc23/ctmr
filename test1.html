@@ -17,7 +17,7 @@
         fetch('https:www.google.com/search?q=mxrf11', { method: 'GET' })
          .then((response) => {
            if (!response.ok) {
-              document.getElementByIdcademo").value = "error";
+              document.getElementById("demo").value = "error";
               //throw new Error(`HTTP error: ${response.status}`);
               return;
            }
@@ -28,7 +28,7 @@
          .then((text) => {
             //poemDisplay.textContent = text;
             //document.getElementById("demo").innerHTML = text;
-            document.getElementByIdcademo").value = text;
+            document.getElementById("demo").value = text;
          })
          .catch((error) => {
             //poemDisplay.textContent = `Could not fetch verse: ${error}`;
