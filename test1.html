@@ -12,7 +12,7 @@ async function getFiis(file) {
   let response = await fetch(file);
   if (response.ok) { // if HTTP-status is 200-299
       // get the response body (the method explained below)
-      let myText = await response.Text();
+      let text = await response.text();
   } else {
       alert("HTTP-Error: " + response.status);
   }
