@@ -9,9 +9,16 @@ function Fiis(){
    getFiis("https://www.google.com/search?q=mxrf11");
 }
 async function getFiis(file) {
-  let myObject = await fetch(file);
-  let myText = await myObject.text();
-  document.getElementById("demo").innerHTML = myText;
+  let response = await fetch(file);
+  if (response.ok) { // if HTTP-status is 200-299
+      // get the response body (the method explained below)
+      let myText = await response.Text();
+  } else {
+      alert("HTTP-Error: " + response.status);
+  }
+  //let myObject = await fetch(file);
+  //let myText = await myObject.text();
+  //document.getElementById("demo").innerHTML = myText;
 }
 </script>
 
