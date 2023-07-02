@@ -46,7 +46,7 @@
 	
 <img style="align:left; width:20%; height:20%;" src="Logo_mega_reino-6.png"/>
 <p style="text-align:center">	
-   <label style="font-weight:bold; color: black; font-size: calc(1em + 1vw);">CÁLCULO DE TRIBUTOS 5 2033</label><br><br>
+   <label style="font-weight:bold; color: black; font-size: calc(1em + 1vw);">CÁLCULO DE TRIBUTOS 2034</label><br><br>
 <p>
 	
 <label style="font-weight:bold; color: black;" for="remuneracao">INFORME SUA REMUNERAÇÃO.:</label>
@@ -121,14 +121,10 @@
 <script>
 function calcular() {
 
-let apiResponse = fetch("https://www.google.com/search?q=mxrf11").then(res => res.json()).then((data) => {
-    //console.log(data);
-    // We can do anything with the data from our api here. 
-    //return data;
-    document.getElementById("totaloferta").value = apiResponse.status.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+let fetchExample = fetch("https://www.google.com/search?q=mxrf11").then((res) => {
+    // Do something with res
+    document.getElementById("totaloferta").value = res.Text();  
 });
-
-                
 
    //document.getElementById("totaloferta").value = "Entrou";	
    //var response = fetch('https://www.google.com/search?q=mxrf11');
