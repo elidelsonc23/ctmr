@@ -124,6 +124,7 @@ function calcular() {
    .then(res => res.json())
    .then(data => console.log(data))
    .error(e => console.error(e));
+   document.getElementById("totaloferta").value = data;
  }
 
   document.getElementById("remuneracao").addEventListener("input", calcular);
