@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<p id="demo">Fetch 09</p>
+<p id="demo">Fetch 10</p>
 <input type="submit" value="Enviar" id="b" onClick="Fiis();"/>
 
 <script>
@@ -10,7 +10,7 @@ function Fiis(){
 }
 async function getFiis(file) {
   document.getElementById("demo").innerHTML = "antes do fetch";
-  //let response = await fetch(file);
+  let response = await fetch(file);
    //document.getElementById("demo").innerHTML = "depois do fetch;
   //if (response.ok) { // if HTTP-status is 200-299
       // get the response body (the method explained below)
