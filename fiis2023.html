@@ -121,10 +121,20 @@
 <script>
 function calcular() {
 
-let fetchExample = fetch("https://www.google.com/search?q=mxrf11").then((res) => {
-    // Do something with res
-    document.getElementById("totaloferta").value = res.text();  
-});
+   fetch('https:www.google.com/search?q=mxrf11', { method: 'GET' })
+         .then((response) => {
+           if (!response.ok) {
+              throw new Error(`HTTP error: ${response.status}`);
+           }
+           return response.text();
+         })
+         .then((text) => {
+            poemDisplay.textContent = text;
+            document.getElementById("demo").innerHTML = text;
+         })
+         .catch((error) => {
+            //poemDisplay.textContent = `Could not fetch verse: ${error}`;
+    });   
 
    //document.getElementById("totaloferta").value = "Entrou";	
    //var response = fetch('https://www.google.com/search?q=mxrf11');
